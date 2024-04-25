@@ -1,4 +1,4 @@
-import styles from "./MyAccount.module.scss";
+import styles from "./Myaccount.module.scss";
 
 export default async function MyAccountPage() {
   return (
