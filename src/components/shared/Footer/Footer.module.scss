@@ -1,0 +1,34 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+    .instagramLink {
+        display: flex; /* Para alinear el texto y el SVG */
+        align-items: center; /* Centrar verticalmente */
+        text-decoration: none; /* Quitar el subrayado predeterminado */
+        color: inherit; /* Heredar el color del texto del padre */
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+
+      .copyright {
+       
+         // Espacio entre el enlace de Instagram y el copyright
+    
+    
+        .githubLink {
+            display: flex;
+            display: flex;
+        gap: 5px;
+            align-items: center;
+            text-decoration: none;
+          color: inherit;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+    }
+}
