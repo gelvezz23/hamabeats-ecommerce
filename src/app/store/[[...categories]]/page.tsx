@@ -15,7 +15,6 @@ const Category: FC<CategoryProps> = async ({ params }) => {
   const { categories } = params;
   let products = [];
   const collections = await getCollections();
-
   if (categories?.length > 0) {
     const selectedCollectionId = collections.find(
       (collection: { handle: string }) => collection.handle === categories[0]

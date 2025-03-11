@@ -3,13 +3,28 @@ import { customerName } from "@/graphql/queries/customerName";
 import { cookies } from "next/headers";
 
 export const validateAccessToken = async () => {
-  const cookiesStore = cookies();
-  const accessToken = cookiesStore.get("accessToken")?.value || "";
+  try {
+    const cookiesStore = cookies();
+    const accessToken = cookiesStore.get("accessToken")?.value || "";
 
-  const graphqlClient = GraphQLClientSingleton.getInstance().getClient();
-  const { customer } = (await graphqlClient.request(customerName, {
-    customerAccessToken: accessToken,
-  })) as any;
+    if (!accessToken) {
+      return null;
+    }
 
-  return customer;
+    const graphqlClient = GraphQLClientSingleton.getInstance().getClient();
+
+    if (!graphqlClient) {
+      console.error("GraphQL client not initialized");
+      return null;
+    }
+
+    const { customer } = (await graphqlClient.request(customerName, {
+      customerAccessToken: accessToken,
+    })) as any;
+
+    return customer;
+  } catch (error) {
+    console.error("Error validating access token:", error);
+    return null; // Devuelve null en caso de error.
+  }
 };

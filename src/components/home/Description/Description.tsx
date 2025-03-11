@@ -15,12 +15,14 @@ export const Description = () => {
         />
       </div>
       <div className={styles.description__text}>
-        <h2>Description</h2>
+        <h2>Hola!</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sequi
-          asperiores culpa cum velit eos obcaecati voluptates ipsa. Inventore
-          fugiat, dignissimos totam nulla aperiam sed reprehenderit cupiditate
-          alias magni enim!
+          Sumérgete en el mundo pixelado con nuestra exclusiva colección de
+          figuras coleccionables. Desde personajes icónicos de videojuegos y la
+          cultura pop, hasta diseños originales llenos de color y nostalgia,
+          cada pieza está hecha a mano con Hama Beads, capturando la esencia del
+          pixel art. ¡Encuentra tu próximo tesoro pixelado y dale un toque único
+          a tu colección!
         </p>
       </div>
     </section>
